@@ -57,5 +57,10 @@ RUN set -x \
        php7-xml \
        php7-pdo_pgsql
 
+ARG PRJ="sample"
+WORKDIR /usr/src/${PRJ}/public
+RUN ln -s /usr/src/${PRJ}/public /var/www/localhost/docroot
+
+
 EXPOSE 80 8000
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]

@@ -20,6 +20,7 @@ services:
       args:
         TZ: 'Asia/Tokyo'
         COMPOSER_VERSION: 1
+        PRJ: 'todo'
     image: ot-mikami/template-laravel-01
     restart: always
     env_file:
