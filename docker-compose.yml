@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web-app:
+    build:
+      context: ./dockerfiles/web-app
+      args:
+        TZ: 'Asia/Tokyo'
+        COMPOSER_VERSION: 1
+    image: ot-mikami/template-laravel-01
+    restart: always
+    env_file:
+      - ./services/web-app/env/web-app.env
+    volumes:
+      - ./services/web-app/conf/php.ini:/etc/php7/php.ini
+      - ./services/web-app/conf/httpd.conf:/etc/apache2/httpd.conf
+      - ./htdocs:/var/www/localhost/htdocs
+      - ./services/web-app/log/apache2:/var/log/apache2
+      - ./src:/usr/src
+    ports:
+      - '8001:80'
+      - '8000:8000'

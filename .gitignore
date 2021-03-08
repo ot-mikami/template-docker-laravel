@@ -1,0 +1,5 @@
+# Apache
+/services/web-app/log/apache2/*.log
+
+# source code
+/src
