@@ -6,3 +6,7 @@
 * Apache: 2.4.*
 * PHP: 7.2.*
     * Composer: 1.*.*
+
+## postgres
+
+* PostgreSQL: 9.6

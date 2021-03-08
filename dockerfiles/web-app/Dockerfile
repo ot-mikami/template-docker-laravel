@@ -54,7 +54,8 @@ RUN set -x \
        php7-pdo \
        php7-tokenizer \
        php7-session \
-       php7-xml
+       php7-xml \
+       php7-pdo_pgsql
 
 EXPOSE 80 8000
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
